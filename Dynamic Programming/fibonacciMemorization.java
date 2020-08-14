@@ -1,10 +1,13 @@
 import java.util.Scanner;
-class fibonacciRec{
-	public static int fib(int a){
-		if(a==0 || a==1)
-			return a;
-		else
-			return fib(a-1) + fib(a-2);
+class fibonacciMemorization{
+	public static long fib(int n){
+		long a = 0,b = 1,c;
+		for(int i = 2;i<=n;i++){
+			c = a + b;
+			a = b;
+			b = c;
+		}
+		return b;
 	}
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
