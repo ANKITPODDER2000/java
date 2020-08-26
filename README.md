@@ -14,10 +14,18 @@ language.
 
 # Why Java?
   >> Object Oriented
+  
   >> Platform Independent
+  
   >> Simple
+  
   >> Secure
+  
   >> Architecture-neutral
+  
   >> Portable
+  
   >> Robust
+  
   >> Multithread
+  
