@@ -38,6 +38,25 @@ class Savings extends Account{
 	void addInterest(){
 		this.balance = this.balance + (this.balance * (this.interest / 100));
 		System.out.println("Interest is added!");
+    }
+
+    boolean have_min_balance(){
+		if(this.balance < this.min_balance){
+			return false;
+		}
+		return true;
+	}
+    
+    void check_min_balance(){
+		if(this.have_min_balance() == false){
+			System.out.println("You don't have enough balance , please deposit money!");
+			this.balance -= this.penalty;
+			if( this.balance < 0)
+				this.balance = 0;
+		}
+		else{
+			System.out.println("You have enough balance!");
+		}
 	}
 
 	void withdrawal(double amount){
@@ -52,25 +71,6 @@ class Savings extends Account{
 
 		this.balance -= amount;
 		System.out.println("withdrawal successful!");
-	}
-
-	boolean have_min_balance(){
-		if(this.balance < this.min_balance){
-			return false;
-		}
-		return true;
-	}
-
-	void check_min_balance(){
-		if(this.have_min_balance() == false){
-			System.out.println("You don't have enough balance , please deposit money!");
-			this.balance -= this.penalty;
-			if( this.balance < 0)
-				this.balance = 0;
-		}
-		else{
-			System.out.println("You have enough balance , don't worry !");
-		}
 	}
 
 	void display_balance(){
@@ -139,7 +139,7 @@ public class Bank{
 				penalty    = sc.nextDouble();
 				min_amount = sc.nextDouble();
 				Savings acc1 = new Savings(name , 15423 , "Savings",	interest , penalty , min_amount);
-				System.out.print("Enter 1->Deposit\nEnter 2->withdrawal\nEnter 3-> display_balance \nEnter 4 -> check_min_balance\nEnter 5 -> Show details\nEnter 6-> Add Interest\nEnter 7-> Quit\n");
+				System.out.print("Enter 1 -> Deposit\nEnter 2 -> withdrawal\nEnter 3 -> display_balance \nEnter 4 -> check_min_balance\nEnter 5 -> Show details\nEnter 6 -> Add Interest\nEnter 7 -> Quit\n");
 				int op;
 				do{
 					System.out.print("Enter the option : ");
@@ -179,7 +179,7 @@ public class Bank{
 				System.out.print("Enter interest : ");
 				interest   = sc.nextDouble();
 				Current acc2 = new Current(name , 15423 , "Current",	interest);
-				System.out.print("Enter 1->Deposit\nEnter 2->withdrawal\nEnter 3-> display_balance\nEnter 4 -> Show details\nEnter 5-> Add Interest\nEnter 6-> Quit\n");
+				System.out.print("Enter 1 -> Deposit\nEnter 2 -> withdrawal\nEnter 3 -> display_balance\nEnter 4 -> Show details\nEnter 5 -> Add Interest\nEnter 6 -> Quit\n");
 				do{
 					System.out.print("Enter the option : ");
 					op = sc.nextInt();
