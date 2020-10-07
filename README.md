@@ -39,6 +39,6 @@ which makes the compiled code executable on many processors, with the presence o
   Java makes an effort to eliminate error-prone situations by emphasizing mainly on compile time error checking and runtime checking.
 
 # Multithread
-  With Java's multithreaded feature it is possible to write programs that can perform many tasks simultaneously. This design feature allows the developers to
-  construct interactive applications that can run smoothly.
+    With Java's multithreaded feature it is possible to write programs that can perform many tasks simultaneously. This design feature allows the developers to
+    construct interactive applications that can run smoothly.
 
