@@ -14,7 +14,7 @@ class fib{
         }
     }
 }
-class prog1{
+class fibonacci_series{
     public static void main(String[] args) {
         fib f = new fib();
         f.printSeries();

@@ -1,8 +1,8 @@
 import java.util.Scanner;
-class Array{
+class NumberList{
     int []arr;
     Scanner sc;
-    Array(int n){
+    NumberList(int n){
         sc = new Scanner(System.in);
         arr = new int[n];
     }
@@ -28,13 +28,13 @@ class Array{
             System.out.print(arr[i] + " ");
     }
 }
-class prog2{
+class Insertion_sort{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.print("Enter the length of array : ");
         n = sc.nextInt();
-        Array arr = new Array(n);
+        NumberList arr = new NumberList(n);
         System.out.print("Enter array elements : ");
         arr.input();
         arr.sort();

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-class prog3{
+class QuadraticEquation{
     public static void main(String[] args) {
         double a , b , c;
         Scanner sc =  new Scanner(System.in);
@@ -14,16 +14,19 @@ class prog3{
         double sq_d = Math.sqrt(Math.abs(d));
         if(d>0)
         {
+            System.out.println("Eqution has two real different roots.");
             System.out.print("Roots are : "+(-b + sq_d)/(2*a)+" "+(-b - sq_d)/(2*a));
         }
-        else if(d==0){
+        else if (d == 0) {
+            System.out.println("Equation has only one real root.");
             double pr = -(b  / (2*a));
             System.out.printf("Root is : %.4f",pr);
         }
-        else{
+        else {
+            System.out.println("Equation does not have any real root.");
             System.out.println("Complex Roots are : "+(-b / (2*a))+"+i*"+sq_d+"  &  "+(-b / (2*a))+"-i*"+sq_d);
-            System.out.print("Real : ", (-b / (2*a)));
-            System.out.println("Imaginary : i*"+sq_d);
+            System.out.println("Real : "+ (-b / (2*a)));
+            System.out.println("Imaginary : i * "+sq_d);
         }
     }
 }
